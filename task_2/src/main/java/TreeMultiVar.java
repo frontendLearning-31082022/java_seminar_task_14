@@ -19,10 +19,9 @@ public class TreeMultiVar<T extends Comparable<T>> {
     }
 
     private int comp(T val1, T val2) {
-        try {val1.compareTo(val2); } catch (ClassCastException ca) {
-            return val1.toString().compareTo(val2.toString());}
+        try {return val1.compareTo(val2); } catch (ClassCastException ca) {
 
-        return val1.compareTo(val2);
+            return val1.toString().compareTo(val2.toString());}
     }
 
     public boolean addNode(Node<T> current, T value) {
