@@ -146,6 +146,7 @@ public class Inputer {
                 if (st.matches(".*" + surName + ".*" + name + ".*" + secondName + ".*" + phone + ".*")) return true;
             }
         } catch (Exception e) {
+            e.printStackTrace();
             throw new IOException("Здесь не должно быть ошибки. Критическая ошибка");
         }
         return false;
